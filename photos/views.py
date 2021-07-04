@@ -11,7 +11,7 @@ def home(request):
 def about(request):
     return render(request,"about.html")
 
-    def search_category(request):
+def search_category(request):
     if 'image' in request.GET and request.GET["image"]:
         search_term = request.GET.get("image")
         searched_images = Image.search_category(search_term)
