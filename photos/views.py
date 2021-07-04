@@ -8,3 +8,6 @@ def home(request):
     images= Image.objects.all()
     return render(request, "home.html", {"images":images})
 
+def about(request):
+    return render(request,"about.html")
+
