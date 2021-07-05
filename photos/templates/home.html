@@ -30,30 +30,26 @@
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                    <div class="modal-header">
-                      <div><h2 style="display: block; width: 100%;">{{image.image_name}}</h2></div>
-
-                       <div><p style="display: block; width: 100%;">{{image.image_description}}</p></div>
-
-                    </div>
+                    <div class="modal-header text-center text-success">
+                      <div><h2 style="display: block; width: 100%; text-align: center;">{{image.image_name}}</h2></div><br>
+                    </div>      
+                       <div><p style="display: block; width: 100%; text-align: center;">{{image.image_description}}</p></div>
                     <div class="modal-body text-center">
                         <a href="{{image.image.url}}"><img src="{{image.image.url}}" style="width:100%;max-width:500px"
                                 alt="image"></a>
                     </div>
-                    <div class="modal-footer">
-
-                        <div class="form-group row">
+                        <div class="form-group row text-center">
                             <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-1">
                                 <input type="text" class="form-control w- mx-3" value="{{image.image.url}}"
                                     id="myInput">
-                                <button class="btn btn-sm btn-outline-info" onclick="myFunction()">Copy</button>
+                                <button class="btn btn-sm btn-outline-info" onclick="myFunction()">Copy url image</button>
                             </div>
                         </div>
+                        <div>
                         <span>Location:{{image.image_location}}</span>
+                        </div>
                         <span>Category:{{image.image_category}}</span>
                         <button type="button" class="btn btn-sm btn-outline-info" data-dismiss="modal">Close</button>
-
-                    </div>
                 </div>
             </div>
         </div>
