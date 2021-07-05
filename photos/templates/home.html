@@ -2,17 +2,13 @@
 {% block content %}
 <header>
     <div class="container text-center">
-        <h1>GALLERY APP</h1>
-        <h2>They say a picture is worth a thousand words. But I wonder, what else do “they” say? In order to find out
-            I’ve culled together the best quotes on the subject of photography. I hope they inspire you.</h2>
-
         <!-- Adding a search form  -->
         <form class="navbar-form" role="search" action="{% url 'search_category' %}" METHOD="GET">
 
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search Item" name="image" required>
-                <div class="input-group-btn">
-                    <button class="btn btn-success" type="submit">Go
+                <input type="text" class="form-control" placeholder="Search Item" name="image" required style="margin-top: 1cm;">
+                <div class="input-group-btn" style="margin-top: 1cm;">
+                    <button class="btn btn-success" type="submit">Search
                     </button>
                 </div>
             </div>
@@ -35,8 +31,9 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title text-center" id="modaltitle">{{image.image_name}}</h4>
-                        <p>{{image.image_description}}</p>
+                      <div><h2 style="display: block; width: 100%;">{{image.image_name}}</h2></div>
+
+                       <div><p style="display: block; width: 100%;">{{image.image_description}}</p></div>
 
                     </div>
                     <div class="modal-body text-center">
